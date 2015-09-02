@@ -109,10 +109,15 @@ public class LessonController {
 		model.addAttribute("lesson", lesson);
 		model.addAttribute("module", "course");
 		if(lesson.getType().equals("text")){
-			if(course.getCategory().getCategoryName().equals("HTML"))
+		        String category = course.getCategory().getCategoryName();
+			if(category.equals("HTML"))
 				return "frontend/course/html-editor"; 
-			else {
+			else if(category.equals("Java")){
 				return "frontend/course/java-editor";
+			}else if(category.equals("C++")){
+			        return "frontend/course/cpp-editor";
+			}else{
+			        return "frontend/course/python-editor";
 			}
 		}else{
 			int pageNow = 1;

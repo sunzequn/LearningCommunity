@@ -297,19 +297,22 @@ public class UserController {
         @RequestMapping(value = "/addFriend/{uid}", method = RequestMethod.GET)
         public String addFriend(Model model, HttpSession session,
                         @PathVariable int uid,
-                        RedirectAttributes redirectAttributes,
-                        HttpRequest request) {
+                        RedirectAttributes redirectAttributes) {
+                System.out.println("test0");
                 User user = (User) session.getAttribute("loginUser");
                 model.addAttribute("user", user);
                 String message = null;
+                System.out.println("test1");
                 if (!userDao.ifFriend(user.getUserId(), uid)) {
+                        System.out.println("test2");
                         userDao.addRel(user.getUserId(), uid);
+                        System.out.println("test3");
                         message = "好友请求已发送";
                 } else {
                         message = "你们已经是好友";
                 }
                 redirectAttributes.addFlashAttribute("userMsg", message);
-                return "redirect:/user/notification/letter";
+                return "redirect:/user/notification/write";
         }
 
         /**

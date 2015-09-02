@@ -5,7 +5,6 @@
 <div class="letter-form">
         <form action="" method="post">
           <select class="form-control " name="uid" id='friend_select'>
-          	<option value="14">Jeff</option>
           		<c:forEach var="friend" items="${friends}">
           			<option value="${friend.userId}">${friend.userName}</option>
           		</c:forEach>

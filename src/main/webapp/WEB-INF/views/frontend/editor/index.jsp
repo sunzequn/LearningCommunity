@@ -45,6 +45,7 @@
 		function loadEditor(d){
 			var language = $(d).attr("lang");
 			var url;
+			console.log(language);
 			switch(language)
 			{
 			case "html": url = "/LearningCommunity/editor/html";
@@ -53,7 +54,7 @@
 				break;
 			case "cpp":url = "${cppRunAddress}";
 			  break;
-			case "python": url = "${pythonRunAddress}";
+			case "python": url = "${pythonRunAddress}";break;
 			default: url = "/LearningCommunity/editor/html";
 			}
 			 $('iframe').attr("src",url);

@@ -14,6 +14,7 @@ public class SystemVariable extends HttpServlet {
         public static String chatRoomAddress;
         public static String cppRunAddress;
         public static String javaRunAddress;
+        public static String pythonRunAddress;
 
         public SystemVariable() {
                 super();
@@ -25,9 +26,10 @@ public class SystemVariable extends HttpServlet {
                 chatRoomAddress = PropertiesUtil.getValue("chatRoomAddress");
                 cppRunAddress = PropertiesUtil.getValue("cppRunAddress");
                 javaRunAddress = PropertiesUtil.getValue("javaRunAddress");
+                pythonRunAddress = PropertiesUtil.getValue("pythonRunAddress");
                 application.setAttribute("chatRoomAddress", chatRoomAddress);
                 application.setAttribute("cppRunAddress", cppRunAddress);
                 application.setAttribute("javaRunAddress", javaRunAddress);
-
+                application.setAttribute("pythonRunAddress", pythonRunAddress);
         }
 }

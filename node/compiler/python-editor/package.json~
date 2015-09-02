@@ -1,0 +1,14 @@
+{
+    "name": "java-editor",
+    "description": "an editor",
+    "version": "0.1.0",
+    "main": "app.js",
+    "dependencies": {
+        "express": "4.13.x",
+        "socket.io": "0.9.x"
+    },
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.4.x"
+    }
+}

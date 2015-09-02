@@ -33,7 +33,6 @@
 						<div class="user-card">
 							<div class="card-inner clearfix">
 								<div class="card-top clearfix">
-									<img src="/LearningCommunity/read/avatar/${loginUser.userId }" alt="" class="avatar-40">
 									<span class="name">${loginUser.userName}</span>
 								</div>
 								<ul class="card-link">

@@ -31,13 +31,13 @@
     			<div class="file-wrap l">
     				<div class="file-form-group">
     					<label for="userName">昵称</label>
-    					<input type="text" id="userName" name="userName">
+    					<input type="text" id="userName" name="userName" value="${loginUser.userName }">
     				</div>
     				<div class="file-form-group">
     					<label for="gender">性别</label>
     					<label><input type="radio" hidefocus="true" value="未知" checked="checked" name="gender">保密</label>
-    					<label><input type="radio" hidefocus="true" value="男" checked="checked" name="gender">男</label>
-    					<label><input type="radio" hidefocus="true" value="女" checked="checked" name="gender">女</label>        					    					
+    					<label><input type="radio" hidefocus="true" value="男"  name="gender">男</label>
+    					<label><input type="radio" hidefocus="true" value="女"  name="gender">女</label>        					    					
     				</div>    
     				<div class="file-form-group">
     					<label for="city">城市</label>
